@@ -11,15 +11,15 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: {main: '#4169E1'},
-        secondary: {main: '#FF5733'},
+        primary: {main: '#6495ED'},
+        secondary: {main: '#FFA500'},
       },
       //spacing: (factor) => `${0.25 * factor}rem` // (Bootstrap strategy)
     },
     dark: {
       palette: {
-        primary: {main: '#6495ED'},
-        secondary: {main: '#FFA500'},
+        primary: {main: '#4169E1'},
+        secondary: {main: '#FF5733'},
       },
       //spacing: (factor) => `${0.25 * factor}rem` // (Bootstrap strategy)
     }
