@@ -11,20 +11,59 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: {main: '#6495ED'},
-        secondary: {main: '#FFA500'},
+        primary: {main: '#FFA500'},
+        secondary: {main: '#6495ED'},
       },
-      //spacing: (factor) => `${0.25 * factor}rem` // (Bootstrap strategy)
     },
     dark: {
       palette: {
-        primary: {main: '#4169E1'},
-        secondary: {main: '#FF5733'},
+        primary: {main: '#803E00'},
+        secondary: {main: '#4169E1'},
       },
-      //spacing: (factor) => `${0.25 * factor}rem` // (Bootstrap strategy)
+    }
+  },
+
+  //Đồng bộ theme components
+  components: {
+    // Name of the component
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          textTransform: 'none'
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem'
+        })
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        // Name of the slot
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: theme.palette.primary.light
+          },
+          '&:hover': {
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main
+            }
+          },
+          // '& fieldset': {
+          //   borderWidth: '1px !important'
+          // },
+        })
+      }
     }
   }
-  // ...other properties
-});
+})
 
 export default theme
