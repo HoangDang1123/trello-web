@@ -4,7 +4,7 @@ import { experimental_extendTheme as extendTheme} from '@mui/material/styles'
 // Create a theme instance.
 const theme = extendTheme({
   trello: {
-    appBarHeight: '52px',
+    appBarHeight: '58px',
     boardBarHeight: '58px'
   },
 
@@ -17,7 +17,7 @@ const theme = extendTheme({
     },
     dark: {
       palette: {
-        primary: {main: '#803E00'},
+        primary: {main: '#A45A1F'},
         secondary: {main: '#4169E1'},
       },
     }
@@ -25,6 +25,25 @@ const theme = extendTheme({
 
   //Đồng bộ theme components
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#808080',
+            borderRadius: '8px'
+          },
+          '*::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#CCCCCC',
+            borderRadius: '8px'
+          }
+        }
+      }
+    },
+
     // Name of the component
     MuiButton: {
       styleOverrides: {
