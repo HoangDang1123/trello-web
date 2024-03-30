@@ -32,9 +32,9 @@ function Profiles() {
             aria-expanded={open ? 'true' : undefined}
           >
             <Avatar
-                sx={{ width: 30, height: 30 }}
+                sx={{ width: 34, height: 34 }}
                 alt='Avatar'
-                src='https://inkythuatso.com/uploads/thumbnails/800/2023/02/hinh-con-vit-vang-cute-lam-avatar-1-24-10-45-25.jpg'
+                src='https://demoda.vn/wp-content/uploads/2022/03/rimuru-tempest-avatar-ngau-599x600.jpg'
             />
           </IconButton>
         </Tooltip>
